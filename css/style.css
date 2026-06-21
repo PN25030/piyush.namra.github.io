@@ -658,7 +658,7 @@ ul {
 }
 
 /* -------------------------------------------------------------------------- */
-/* 8. EXPERIENCE TIMELINE - Centered alternating vertical design                */
+/* 8. EXPERIENCE TIMELINE - Left-aligned vertical timeline                      */
 /* -------------------------------------------------------------------------- */
 
 .timeline {
@@ -666,17 +666,14 @@ ul {
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem 0;
-    display: grid;
-    row-gap: 2.5rem;
 }
 
-/* central vertical spine */
+/* left vertical spine */
 .timeline::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 40px;
     width: 4px;
     height: 100%;
     background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
@@ -684,20 +681,21 @@ ul {
     z-index: 0;
 }
 
-/* each row is a three-column grid: left content, spine, right content */
+/* two-column layout: marker column + content column */
 .timeline-item {
     display: grid;
-    grid-template-columns: 1fr 64px 1fr;
+    grid-template-columns: 72px 1fr;
     align-items: start;
     column-gap: 1rem;
     position: relative;
+    padding-left: 8px;
 }
 
 .timeline-item:last-child { margin-bottom: 0; }
 
-/* marker sits on the spine */
+/* marker sits on the left spine */
 .timeline-marker {
-    grid-column: 2;
+    grid-column: 1;
     justify-self: center;
     width: 18px;
     height: 18px;
@@ -709,37 +707,25 @@ ul {
     box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-/* timeline content cards live in column 1 (left) or 3 (right) */
+/* all content lives in the right column */
 .timeline-content {
-    grid-column: 1;
+    grid-column: 2;
     padding: 1.5rem;
-    max-width: 460px;
+    max-width: none;
     position: relative;
     z-index: 1;
 }
 
-/* alternate to right column */
-.timeline-item:nth-child(even) .timeline-content { grid-column: 3; }
-
-/* small pointer toward the spine */
-.timeline-item:nth-child(odd) .timeline-content::after,
-.timeline-item:nth-child(even) .timeline-content::after {
+/* pointer from content to spine (left) */
+.timeline-content::after {
     content: '';
     position: absolute;
     top: 26px;
+    left: -20px;
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-}
-
-.timeline-item:nth-child(odd) .timeline-content::after {
-    right: -20px;
-    border-left: 12px solid var(--card-bg);
-}
-
-.timeline-item:nth-child(even) .timeline-content::after {
-    left: -20px;
     border-right: 12px solid var(--card-bg);
 }
 
@@ -764,11 +750,10 @@ ul {
 /* responsive: stack vertically on small screens */
 @media (max-width: 768px) {
     .timeline { padding-left: 1rem; padding-right: 1rem; }
-    .timeline::before { left: 28px; transform: translateX(0); width: 3px; }
+    .timeline::before { left: 28px; width: 3px; }
     .timeline-item { grid-template-columns: 48px 1fr; row-gap: 1rem; }
     .timeline-marker { grid-column: 1; justify-self: center; margin-top: 6px; }
     .timeline-content { grid-column: 2; margin-left: 0; max-width: none; }
-    .timeline-item:nth-child(even) .timeline-content { grid-column: 2; }
     .timeline-content::after { display: none; }
 }
 
