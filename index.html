@@ -51,6 +51,10 @@
     }
     .toggle-details:hover{ color: var(--primary); border-color: var(--primary); }
     .toggle-details[aria-expanded="true"]{ background: linear-gradient(135deg,var(--primary),var(--secondary)); color: #fff; border-color: transparent; }
+
+    /* Remove duration visuals added earlier */
+    .timeline-marker::before, .timeline-marker::after, .duration-label { display: none !important; }
+    .timeline-marker { width: 18px !important; height: 18px !important; }
     </style>
 </head>
 
