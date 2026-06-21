@@ -213,6 +213,15 @@ document.addEventListener('DOMContentLoaded', () => {
         marker.setAttribute('data-duration-text', label);
         marker.style.setProperty('--duration-scale', scale);
         marker.style.setProperty('--duration-height', height + 'px');
+
+        // also add a duration label inside the experience block (next to the time-period)
+        let durationSpan = item.querySelector('.duration-label');
+        if(!durationSpan){
+            durationSpan = document.createElement('span');
+            durationSpan.className = 'duration-label';
+            periodEl.insertAdjacentElement('afterend', durationSpan);
+        }
+        durationSpan.textContent = label;
     });
 
     // Add hover listeners to ensure marker scales also on keyboard focus
