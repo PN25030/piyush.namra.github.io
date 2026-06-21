@@ -154,4 +154,73 @@ document.addEventListener('DOMContentLoaded', () => {
         tc.appendChild(btn);
     });
 
+    // --------------------------------------------------------------------------
+    // 7. TIMELINE DURATION CALCULATION
+    // --------------------------------------------------------------------------
+    // Parse period strings like "Feb 2026 – Present" or "Mar 2010 – Jan 2015"
+    function parsePeriod(periodStr){
+        if(!periodStr) return 0;
+        // Normalize dash
+        const parts = periodStr.split(/–|—|-|to/).map(p => p.trim());
+        if(parts.length === 0) return 0;
+        const monthsMap = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+
+        function parseToken(tok){
+            if(!tok) return null;
+            if(/Present|present|Current|current/.test(tok)) return new Date();
+            // try to match 'Mon YYYY' or 'Month YYYY' or 'YYYY'
+            const m = tok.match(/([A-Za-z]{3,9})\s*(\d{4})/);
+            if(m){
+                const mon = m[1].slice(0,3);
+                const yr = parseInt(m[2],10);
+                const monthIdx = monthsMap[mon] !== undefined ? monthsMap[mon] : 0;
+                return new Date(yr, monthIdx, 1);
+            }
+            const y = tok.match(/(\d{4})/);
+            if(y) return new Date(parseInt(y[1],10),0,1);
+            return null;
+        }
+
+        const start = parseToken(parts[0]);
+        const end = parts[1] ? parseToken(parts[1]) : new Date();
+        if(!start || !end) return 0;
+        // compute months diff
+        const months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+        return Math.max(0, Math.round(months));
+    }
+
+    // Format duration into human friendly label
+    function formatDuration(months){
+        if(months <= 0) return '0 mos';
+        const yrs = Math.floor(months/12);
+        const rem = months % 12;
+        if(yrs >= 2) return `${yrs} yrs${rem? ' ' + rem + ' mos' : ''}`;
+        if(yrs === 1) return `1 yr${rem? ' ' + rem + ' mos' : ''}`;
+        return `${rem} mos`;
+    }
+
+    // Apply duration visuals to markers
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach(item => {
+        const periodEl = item.querySelector('.time-period');
+        const marker = item.querySelector('.timeline-marker');
+        if(!periodEl || !marker) return;
+        const months = parsePeriod(periodEl.textContent || periodEl.innerText);
+        const label = formatDuration(months);
+        // scale: base 1, +0.06 per 6 months, clamp
+        const scale = Math.min(2.2, Math.max(0.9, 1 + (months / 12) * 0.12));
+        const height = Math.min(260, Math.max(18, months * 3)); // px
+        marker.setAttribute('data-duration-text', label);
+        marker.style.setProperty('--duration-scale', scale);
+        marker.style.setProperty('--duration-height', height + 'px');
+    });
+
+    // Add hover listeners to ensure marker scales also on keyboard focus
+    timelineItems.forEach(item => {
+        item.addEventListener('mouseenter', () => item.classList.add('hovered'));
+        item.addEventListener('mouseleave', () => item.classList.remove('hovered'));
+        item.addEventListener('focusin', () => item.classList.add('hovered'));
+        item.addEventListener('focusout', () => item.classList.remove('hovered'));
+    });
+
 });
