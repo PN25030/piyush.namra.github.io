@@ -130,4 +130,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --------------------------------------------------------------------------
+    // 6. COLLAPSIBLE PROFESSIONAL EXPERIENCE
+    // --------------------------------------------------------------------------
+    // Start timeline entries collapsed and add accessible toggle buttons
+    const timelineContents = document.querySelectorAll('.timeline-content');
+    timelineContents.forEach(tc => {
+        tc.classList.add('collapsed');
+
+        const btn = document.createElement('button');
+        btn.className = 'toggle-details';
+        btn.type = 'button';
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = 'Show more';
+
+        btn.addEventListener('click', () => {
+            const isCollapsed = tc.classList.toggle('collapsed'); // true if now collapsed
+            btn.setAttribute('aria-expanded', String(!isCollapsed));
+            btn.textContent = isCollapsed ? 'Show more' : 'Show less';
+        });
+
+        tc.appendChild(btn);
+    });
+
 });
