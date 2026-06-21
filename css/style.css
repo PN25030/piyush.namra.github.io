@@ -518,7 +518,8 @@ ul {
     font-weight: 700;
     color: var(--heading-color);
     box-shadow: var(--shadow-sm);
-    animation: float 6s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
+    overflow: visible;
 }
 
 .float-1 {
@@ -543,6 +544,12 @@ ul {
     top: 50%;
     left: -10%;
     animation-delay: 4.5s;
+}
+
+.float-5 {
+    bottom: 10%;
+    right: 5%;
+    animation-delay: 6s;
 }
 
 @keyframes rotate {
