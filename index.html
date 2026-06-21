@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piyush Namra | Data Architect | GCP | Enterprise Data Platforms</title>
+    <meta name="description"
+        content="Data Architect with 16+ years of experience designing enterprise-scale data platforms in banking and financial services. GCP expert specialising in Medallion Architecture, data governance, and real-time streaming.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">PN<span>.</span></a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                    </svg>
+                </button>
+                <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================================================================ -->
+        <!-- HERO SECTION                                                      -->
+        <!-- ================================================================ -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-subtitle">Open to Opportunities &bull; Birmingham, UK</span>
+                    <h1 class="hero-title">Hi, I'm <span class="highlight">Piyush Namra</span></h1>
+                    <p class="hero-role">Data Architect &bull; GCP &bull; Enterprise Data Platforms &bull; Banking &amp;
+                        Financial Services</p>
+                    <p class="hero-description">
+                        16+ years designing enterprise-scale data platforms for banking and financial services.
+                        Currently leading architecture and standardisation of a cloud-native GCP data platform
+                        for a major UK bank — specialising in Medallion architecture, data governance,
+                        real-time streaming, and AI-ready platform design.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="assets/pdf/Piyush_Namra_Resume.pdf" class="btn btn-secondary"
+                            download="Piyush_Namra_Resume.pdf">
+                            <span>Download CV</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" x2="12" y1="15" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="hero-image-wrapper">
+                        <div class="profile-graphic">
+                            <div class="circle circle-inner"></div>
+                            <div class="circle circle-mid"></div>
+                            <div class="circle circle-outer"></div>
+                            <div class="tech-stack-float float-1">GCP</div>
+                            <div class="tech-stack-float float-2">BQ</div>
+                            <div class="tech-stack-float float-3">DBT</div>
+                            <div class="tech-stack-float float-4">Beam</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- ABOUT SECTION                                                     -->
+        <!-- ================================================================ -->
+        <section class="about-section section-padding" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Architecting data platforms that power regulated enterprises.</h3>
+                        <p>
+                            I am a Data Architect with over 16 years of experience designing and delivering
+                            enterprise-scale
+                            data platforms in banking and financial services. I currently lead architecture and
+                            standardisation
+                            of a cloud-native enterprise data platform on GCP for a major UK bank.
+                        </p>
+                        <p>
+                            My expertise spans Medallion architecture, data governance, real-time streaming, and
+                            regulated-environment delivery. I have a proven track record of defining architecture
+                            standards,
+                            enabling domain onboarding, and building secure, scalable data ecosystems — increasingly
+                            focused on AI-ready platform design, MLOps, and responsible AI governance.
+                        </p>
+
+                        <!-- Key Achievements -->
+                        <div class="achievements-list">
+                            <h4>Key Achievements</h4>
+                            <ul>
+                                <li>Designed and implemented enterprise-wide Medallion (Bronze–Silver–Gold) architecture
+                                    adopted across multiple data domains at a UK bank.</li>
+                                <li>Onboarded 6+ business domains onto a centralised GCP data platform, accelerating
+                                    delivery through reusable frameworks and accelerators.</li>
+                                <li>Established data governance and quality framework using Dataplex and Ataccama,
+                                    improving data lineage, compliance, and auditability.</li>
+                                <li>Delivered real-time data ingestion architecture using Pub/Sub and Kafka, enabling
+                                    near real-time analytics across enterprise domains.</li>
+                                <li>Led Hadoop-to-GCP and Teradata-to-BigQuery cloud migrations, reducing infrastructure
+                                    costs and modernising legacy data estates.</li>
+                            </ul>
+                        </div>
+
+                        <div class="personal-info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Birmingham, UK</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">namrapiyush@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Phone</span>
+                                <span class="info-value">+44 7344 866094</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Visa</span>
+                                <span class="info-value">UK Global Mobility Visa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats-card card">
+                        <div class="stat-item">
+                            <span class="stat-number">16+</span>
+                            <span class="stat-label">Years of Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">6+</span>
+                            <span class="stat-label">Business Domains Onboarded</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Cloud Certifications</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Companies Served</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- EXPERIENCE SECTION                                                -->
+        <!-- ================================================================ -->
+        <section class="experience-section section-padding" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Professional Experience</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="timeline">
+
+                    <!-- Job 1: Lloyds -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card">
+                            <span class="time-period">Feb 2026 – Present</span>
+                            <h3 class="job-title">Data Architect</h3>
+                            <h4 class="company-name">Lloyds Banking Group (via TCS) &bull; Birmingham, United Kingdom
+                            </h4>
+                            <p class="job-description">
+                                Lead architect within the central Data Engineering Capability Team, driving design and
+                                standardisation of a cloud-native enterprise data platform on GCP for a regulated UK
+                                banking environment.
+                            </p>
+                            <ul class="job-bullets">
+                                <li>Defined target-state architecture and enterprise data standards across ingestion,
+                                    transformation, and consumption layers.</li>
+                                <li>Designed and implemented Medallion (Bronze–Silver–Gold) architecture data products
+                                    for enterprise-wide adoption across 6+ business domains.</li>
+                                <li>Established lakehouse architecture on BigQuery, ensuring structured data
+                                    progression, auditability, and compliance.</li>
+                                <li>Defined data governance and quality framework using Dataplex and Ataccama, improving
+                                    lineage tracking and regulatory compliance.</li>
+                                <li>Architected batch and streaming data pipelines using Apache Beam and Dataflow,
+                                    supporting both real-time and scheduled processing.</li>
+                                <li>Defined real-time ingestion architecture using Pub/Sub, Kafka, and Kubernetes for
+                                    near real-time analytics delivery.</li>
+                                <li>Established Infrastructure-as-Code standards using Terraform, enabling scalable and
+                                    repeatable platform provisioning.</li>
+                                <li>Evaluated and prototyped RAG (Retrieval-Augmented Generation) architecture using
+                                    BigQuery Vector Search and Vertex AI.</li>
+                                <li>Designed AI governance and model risk framework aligned with FCA/PRA regulatory
+                                    guidance.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>GCP</span><span>Dataflow</span><span>BigQuery</span><span>Dataplex</span>
+                                <span>Apache Beam</span><span>PySpark</span><span>DBT</span><span>Ataccama</span>
+                                <span>Pub/Sub</span><span>Kafka</span><span>Kubernetes</span><span>Terraform</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 2: TCS -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card">
+                            <span class="time-period">Jul 2024 – Jan 2026</span>
+                            <h3 class="job-title">Data Engineer (Lead)</h3>
+                            <h4 class="company-name">TCS, Pune &bull; Pune, India</h4>
+                            <p class="job-description">
+                                Served as Lead Data Engineer within the Data Engineering Capability Team for a UK-based
+                                banking client,
+                                building reusable frameworks and platform accelerators to speed up delivery across
+                                business domains.
+                            </p>
+                            <ul class="job-bullets">
+                                <li>Designed and developed batch and streaming pipelines using Apache Beam, PySpark, and
+                                    Dataflow.</li>
+                                <li>Implemented data transformation and modelling workflows using BigQuery and DBT.</li>
+                                <li>Supported data quality, governance, and ingestion frameworks using Dataplex,
+                                    Ataccama, and Pub/Sub.</li>
+                                <li>Built reusable platform components and accelerators to reduce onboarding time for
+                                    new business domains.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>Apache Beam</span><span>PySpark</span><span>GCP</span><span>Dataflow</span>
+                                <span>BigQuery</span><span>DBT</span><span>Dataplex</span><span>Ataccama</span>
+                                <span>Pub/Sub</span><span>Kafka</span><span>Kubernetes</span><span>Terraform</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 3: Accenture -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card">
+                            <span class="time-period">Feb 2022 – Jun 2024</span>
+                            <h3 class="job-title">Associate – Data Manager</h3>
+                            <h4 class="company-name">Accenture Technologies &bull; Pune, India</h4>
+                            <p class="job-description">
+                                Led Hadoop-to-GCP cloud migration for a US cards and payments bank, developing scalable
+                                utilities
+                                and orchestration frameworks.
+                            </p>
+                            <ul class="job-bullets">
+                                <li>Built Python-based orchestration framework (Lumi-SDK) enabling dynamic workflows,
+                                    cross-project execution, and resource tracking.</li>
+                                <li>Developed data movement and ingestion utilities supporting multiple formats
+                                    (Parquet, CSV, Audio) with encryption and PII protection.</li>
+                                <li>Enabled local development environments using GCP emulators and Docker-based Airflow,
+                                    improving debugging and testing efficiency.</li>
+                                <li>Enhanced data governance, developer experience, and cloud resource utilisation
+                                    across enterprise data pipelines.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>GCP</span><span>Python</span><span>Airflow</span><span>Docker</span>
+                                <span>PySpark</span><span>BigQuery</span><span>Pub/Sub</span><span>Hadoop</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 4: HCL -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card">
+                            <span class="time-period">Jun 2021 – Feb 2022</span>
+                            <h3 class="job-title">Consultant – Data Architect</h3>
+                            <h4 class="company-name">HCL Technologies &bull; Pune, India</h4>
+                            <ul class="job-bullets">
+                                <li>Led Teradata-to-BigQuery migration, modernising legacy data infrastructure for a
+                                    leading UK bank.</li>
+                                <li>Designed historical data migration frameworks using PySpark and GCS with optimised
+                                    loading strategies.</li>
+                                <li>Produced architecture documentation and stakeholder adoption guidelines.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>Teradata</span><span>BigQuery</span><span>PySpark</span><span>GCS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 5: Atos-Syntel -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card">
+                            <span class="time-period">Jan 2015 – Jun 2021</span>
+                            <h3 class="job-title">Consultant / Team Lead</h3>
+                            <h4 class="company-name">Atos-Syntel &bull; Glasgow, United Kingdom</h4>
+                            <ul class="job-bullets">
+                                <li>Delivered cloud migration proofs-of-concept and enterprise data platform solutions
+                                    using GCP and the Hadoop ecosystem.</li>
+                                <li>Provided architecture consulting and pre-sales support including cost modelling and
+                                    solution design.</li>
+                                <li>Led an 8-person UK team delivering enterprise application enhancements and
+                                    deployment automation.</li>
+                                <li>Built Python-based automation tools to improve operational efficiency and reduce
+                                    manual deployment effort.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>GCP</span><span>Hadoop</span><span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 6: Syntel -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card">
+                            <span class="time-period">Mar 2010 – Jan 2015</span>
+                            <h3 class="job-title">Software Engineer</h3>
+                            <h4 class="company-name">Syntel Pvt. Ltd. &bull; Pune, India</h4>
+                            <ul class="job-bullets">
+                                <li>Developed and maintained financial data applications using SQL, PL/SQL, and
+                                    scripting languages.</li>
+                                <li>Delivered enhancements improving data accuracy, stability, and reconciliation
+                                    processes across banking systems.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>Oracle</span><span>SQL</span><span>PL/SQL</span><span>Linux</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- SKILLS SECTION                                                    -->
+        <!-- ================================================================ -->
+        <section class="skills-section section-padding" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Core Skills</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="skills-container">
+                    <div class="skills-category-card card">
+                        <h3>Cloud &amp; Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">GCP</span>
+                            <span class="skill-tag">BigQuery</span>
+                            <span class="skill-tag">Dataflow</span>
+                            <span class="skill-tag">Dataplex</span>
+                            <span class="skill-tag">Pub/Sub</span>
+                            <span class="skill-tag">GCS</span>
+                            <span class="skill-tag">Hadoop</span>
+                            <span class="skill-tag">Oracle</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-category-card card">
+                        <h3>Data Engineering</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Apache Beam</span>
+                            <span class="skill-tag">Apache Spark / PySpark</span>
+                            <span class="skill-tag">DBT</span>
+                            <span class="skill-tag">Airflow</span>
+                            <span class="skill-tag">Kafka</span>
+                            <span class="skill-tag">Pub/Sub</span>
+                            <span class="skill-tag">Streaming &amp; Batch Processing</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-category-card card">
+                        <h3>Architecture</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Medallion Architecture</span>
+                            <span class="skill-tag">Lakehouse</span>
+                            <span class="skill-tag">Data Modelling</span>
+                            <span class="skill-tag">Data Governance</span>
+                            <span class="skill-tag">Data Quality</span>
+                            <span class="skill-tag">Real-Time Ingestion</span>
+                            <span class="skill-tag">Collibra</span>
+                            <span class="skill-tag">Data Lineage</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-category-card card">
+                        <h3>AI/ML &amp; GenAI</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Vertex AI</span>
+                            <span class="skill-tag">RAG Architecture</span>
+                            <span class="skill-tag">Vector Databases</span>
+                            <span class="skill-tag">LLM Integration</span>
+                            <span class="skill-tag">MLOps</span>
+                            <span class="skill-tag">Feature Engineering</span>
+                            <span class="skill-tag">Model Governance</span>
+                            <span class="skill-tag">Responsible AI</span>
+                            <span class="skill-tag">LangChain</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-category-card card">
+                        <h3>DevOps &amp; Tooling</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Terraform</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Ataccama</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">PL/SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- CERTIFICATIONS SECTION                                            -->
+        <!-- ================================================================ -->
+        <section class="certifications-section section-padding" id="certifications">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="certs-grid">
+
+                    <div class="cert-card card">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                            </svg>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Google Cloud Professional Cloud Architect</h4>
+                            <span class="cert-issuer">Google</span>
+                            <span class="cert-date">Valid until Feb 2026</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card card">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                            </svg>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Google Cloud Professional Data Engineer</h4>
+                            <span class="cert-issuer">Google</span>
+                            <span class="cert-date">Certified Jan 2021, Recertified Mar 2023</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card card">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                            </svg>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Google Cloud Associate Data Engineer</h4>
+                            <span class="cert-issuer">Google</span>
+                            <span class="cert-date">Dec 2022</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card card">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                            </svg>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Databricks Certified Data Engineer Associate</h4>
+                            <span class="cert-issuer">Databricks Academy</span>
+                            <span class="cert-date">Apr 2023</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card card">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                            </svg>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Generative AI Leader Certification</h4>
+                            <span class="cert-issuer">Google</span>
+                            <span class="cert-date">Valid until Nov 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card card">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                            </svg>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Oracle Autonomous Database Cloud 2019 Certified Specialist</h4>
+                            <span class="cert-issuer">Oracle</span>
+                            <span class="cert-date">Jul 2020</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card card">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                            </svg>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Oracle Cloud Infrastructure Developer 2020 Certified Associate</h4>
+                            <span class="cert-issuer">Oracle</span>
+                            <span class="cert-date">Aug 2020</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card card cert-card--upcoming">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 20h9" />
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                            </svg>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Google Professional Machine Learning Engineer</h4>
+                            <span class="cert-issuer">Google</span>
+                            <span class="cert-date">Target: Q3 2026</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Education -->
+                <div class="education-block">
+                    <h3 class="education-title">Education</h3>
+                    <div class="education-card card">
+                        <div class="education-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                            </svg>
+                        </div>
+                        <div class="education-content">
+                            <h4>Bachelor of Engineering (Computer Science)</h4>
+                            <span class="edu-institution">Solapur University, Solapur</span>
+                            <span class="edu-date">Graduated: 2009</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- CONTACT SECTION                                                   -->
+        <!-- ================================================================ -->
+        <section class="contact-section section-padding" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Let's build something exceptional together!</h3>
+                        <p>
+                            I'm open to discussing contract opportunities, full-time positions, and interesting
+                            data architecture collaborations in banking, financial services, or enterprise data
+                            platforms.
+                            Drop me a line, and let's connect.
+                        </p>
+                        <div class="contact-methods">
+                            <div class="contact-method-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                                <a href="mailto:namrapiyush@gmail.com">namrapiyush@gmail.com</a>
+                            </div>
+                            <div class="contact-method-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                <span>Birmingham, United Kingdom</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/namrapiyush" target="_blank" rel="noopener"
+                                aria-label="LinkedIn Profile">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect width="4" height="12" x="2" y="9" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/piyush-namra" target="_blank" rel="noopener"
+                                aria-label="GitHub Profile">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form card" id="contact-form" action="https://formspree.io/f/namrapiyush"
+                        method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Hi Piyush, I'd like to discuss..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bottom">
+        <div class="container">
+            <p>&copy; 2026 Piyush Namra &bull; Data Architect &bull; Birmingham, UK</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
